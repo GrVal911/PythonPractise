@@ -20,7 +20,7 @@ data['ContractTime'].fillna('nan', inplace=True)
 enc = DictVectorizer()
 X_train_categ = enc.fit_transform(data[['LocationNormalized', 'ContractTime']].to_dict('records'))
 # X_test_categ = enc.transform(data[['LocationNormalized', 'ContractTime']].to_dict('records'))
-# print(X_train_categ, X_test_categ)
+# print(X_train_categ)
 
 params=hstack((X, X_train_categ))
 # print(params)
